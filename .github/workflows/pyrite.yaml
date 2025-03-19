@@ -36,3 +36,8 @@ jobs:
           tags: ghcr.io/pyritecloud/react-example-npm:latest
           platforms: linux/amd64,linux/arm64
           push: true
+      
+      - name: Redeploy Deployment
+        uses: PyriteCloud/redeploy-action@v1
+        with:
+          token: ${{ secrets.PYRITE_TOKEN }}
